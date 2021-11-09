@@ -1,0 +1,24 @@
+ALGORITHM problem 1
+VAR
+    c:CHAR
+    paragraph = string
+    count-ch = INTEGER:=0
+    count-words = INTEGER:=0
+    count-vowels = INTEGER:=0
+BEGIN
+    REPEAT
+        read (c)
+        IF (c in [a-z])THEN
+        count-ch = count-ch +1
+        ELSE_IF (c =' 'or c ='.')THEN
+        count-words = count-words +1
+        END_IF ( c in [a,u,i,o,y,e])THEN
+        count-vowels = count-vowels + 1
+    END_IF
+    paragraph = paragraph +c
+    UNTIL (c='.')
+    print('this is the input paragraph:',paragraph)
+    print('number of characters:',count-ch)
+    print('number of words:',count-words)
+    print('number of vowels:',count-vowels)
+END
